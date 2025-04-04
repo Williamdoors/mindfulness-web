@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 248, 249, 250;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  min-height: 100vh;
+}
+
+@layer components {
+  .btn-primary {
+    @apply py-2 px-4 bg-primary-600 text-white font-semibold rounded-lg shadow-md hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-opacity-75 transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply py-2 px-4 bg-secondary-600 text-white font-semibold rounded-lg shadow-md hover:bg-secondary-700 focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:ring-opacity-75 transition-colors duration-200;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-md overflow-hidden p-6;
+  }
+  
+  .heading-1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6;
+  }
+  
+  .heading-2 {
+    @apply text-3xl md:text-4xl font-bold text-gray-800 mb-4;
+  }
+  
+  .paragraph {
+    @apply text-gray-600 leading-relaxed;
+  }
+  
+  .container-main {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12;
+  }
+} 
